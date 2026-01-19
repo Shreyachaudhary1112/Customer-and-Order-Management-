@@ -144,13 +144,14 @@ WHERE order_id = 2;
 
 ## Project Structure
 
+```text
 customer-order-management-db/
 ├── schema.sql
 ├── queries.sql
 ├── insert_sample_data.sql
 ├── ERD-diagram.svg
 └── README.md
-
+```
 
 ---
 
