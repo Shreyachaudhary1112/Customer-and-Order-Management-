@@ -118,5 +118,51 @@ The SQL scripts in this project implement:
 ## Example Queries
 
 **List all customers**
-```sql
+
+Query to retrieve all customer records from the database:
+
 SELECT * FROM customers;
+
+**Retrieve all orders placed by a customer**
+
+Query to fetch order IDs and order dates for a specific customer:
+
+SELECT o.order_id, o.order_date  
+FROM orders o  
+JOIN customers c ON o.customer_id = c.customer_id  
+WHERE c.customer_id = 1;
+
+**Calculate total value of an order**
+
+Query to compute the total amount for a given order:
+
+SELECT SUM(item_price * quantity) AS total_amount  
+FROM order_items  
+WHERE order_id = 2;
+
+---
+
+## Project Structure
+
+customer-order-management-db/
+├── schema.sql
+├── queries.sql
+├── insert_sample_data.sql
+├── ERD-diagram.svg
+└── README.md
+
+
+---
+
+## Technologies Used
+
+- PostgreSQL  
+- SQL  
+- Relational Database Design  
+
+---
+
+## License
+
+This project is released under the MIT License.
+
